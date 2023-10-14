@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    tools:openDrawer="start"
+    android:id="@+id/drawerlayout">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/materialtoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/panelOverColor"
+                app:navigationIcon="@drawable/baseline_menu_24"
+                app:navigationIconTint="#FFFFFF"
+                app:title="ZzooTec"
+                app:titleTextColor="#FFFFFF"
+                app:menu="@menu/appbarmenu"
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/framlayout"
+            android:background="@drawable/contorno"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="80dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BIENVENIDO A ZzooTec"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:layout_marginBottom="50dp"/>
+
+                <ImageView
+                    android:layout_width="260dp"
+                    android:layout_height="250dp"
+                    app:srcCompat="@drawable/new_logo_zzootec"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="50dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recuerda que siempre debes atender con el corazon"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/headerlayout"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_item"
+        android:background="@drawable/contorno"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

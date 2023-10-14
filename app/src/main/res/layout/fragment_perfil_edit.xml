@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/contorno"
+    android:orientation="vertical"
+    tools:context=".PerfilEditFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Editar Perfil"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Foto de perfil:"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/perfil"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/Edit_user"
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:textColorHint="@color/white"
+            android:hint="Nuevo Correo"
+            android:inputType="textEmailAddress">
+        </EditText>
+
+        <EditText
+            android:id="@+id/Edit_password"
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:textColorHint="@color/white"
+            android:hint="Nueva Contraseña"
+            android:inputType="textPassword">
+        </EditText>
+        <EditText
+            android:id="@+id/Confirm_password"
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:textColorHint="@color/white"
+            android:hint="Confirmar Contraseña"
+            android:inputType="textPassword">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_actualizar"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Guardar Cambios"
+            android:backgroundTint="#ff0000"
+            android:textColor="@color/white">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

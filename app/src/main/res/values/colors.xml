@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Background Colors PRIMARIOS Y SEC-->
+    <color name="primaryBackColor1">#020202</color>
+    <color name="primaryBackColor2">#0F0F0F</color>
+    <color name="secondaryBackColor1">#000000</color>
+    <color name="secondaryBackColor2">#333333</color>
+
+    <!--Window Border Colors BORDE DE ESCRITORIO-->
+    <color name="winBorderColor1">#FF00FF</color>
+    <color name="winBorderColor2">#FFA500</color>
+    <color name="winBorderColor3">#8B0000</color>
+
+    <!--Paleta de Colores-->
+    <color name="color1">#E285DE</color>
+    <color name="color2">#784DFD</color>
+    <color name="color3">#4ADAEC</color>
+    <color name="color4">#FB539B</color>
+    <color name="color5">#7E82FC</color>
+    <color name="color6">#FFC047</color>
+    <color name="color7">#EF6C96</color>
+    <color name="color8">#78A3FC</color>
+    <color name="color9">#07F3C0</color>
+    <color name="color10">#FBA1AA</color>
+    <color name="color11">#ffb703</color>
+    <color name="color12">#ef476f</color>
+    <color name="color13">#fbf8cc</color>
+    <color name="color14">#b9fbc0</color>
+    <color name="color15">#edf6f9</color>
+
+    <!--Font Colors-->
+    <color name="titleColor1">#E0E1F1</color>
+    <color name="titleColor2">#D5CFF5</color>
+    <color name="titleColor3">#BCBEE0</color>
+    <color name="plainTextColor1">#9497CD</color>
+    <color name="plainTextColor2">#7C80C2</color>
+    <color name="plainTextColor3">#7376BD</color>
+
+    <!--Panel Colors-->
+    <color name="panelColor">#200F53</color>
+    <color name="panelOverColor">#333333</color>
+    <color name="panelActiveColor">#212529</color>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/Home"
+            android:title="Inicio"
+            android:icon="@drawable/baseline_home_24"
+            android:checkable="true"/>
+
+        <item android:id="@+id/Bus"
+            android:title="Editar Perfil"
+            android:icon="@drawable/edit_user"
+            android:checkable="true"/>
+
+        <item android:id="@+id/Rating"
+            android:title="Asistencia"
+            android:icon="@drawable/baseline_compass_calibration_24"
+            android:checkable="true"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Profile">
+            <menu>
+                <item android:id="@+id/logout"
+                    android:icon="@drawable/baseline_local_grocery_store_24"
+                    android:title="logout"
+                    android:checkable="true"/>
+            </menu>
+        </item>
+    </group>
+</menu>
