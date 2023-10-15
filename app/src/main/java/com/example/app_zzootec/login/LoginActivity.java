@@ -29,13 +29,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 login();
-                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
             }
         });
     }
 
     public void login(){
-        if(user.equals("admin") && password.equals("1234")){
+        if(user.getText().toString().equals("admin") && password.getText().toString().equals("1234")){
             startActivity(new Intent(getApplicationContext(), MenuActivity.class));
         }else{
             Toast.makeText(this, "USUARIO O CONTRASEÑA INCORRECTA", Toast.LENGTH_SHORT).show();

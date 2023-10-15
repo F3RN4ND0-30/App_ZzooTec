@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Editar Perfil"
-            android:textSize="25dp"
+            android:textSize="30dp"
             android:gravity="center"
             android:textColor="@color/white"
             android:textStyle="bold"

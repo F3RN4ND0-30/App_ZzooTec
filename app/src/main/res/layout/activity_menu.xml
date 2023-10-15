@@ -56,7 +56,7 @@
                 <ImageView
                     android:layout_width="260dp"
                     android:layout_height="250dp"
-                    app:srcCompat="@drawable/new_logo_zzootec"
+                    app:srcCompat="@drawable/logo_fernando"
                     android:layout_gravity="center"
                     android:layout_marginBottom="50dp"/>
 

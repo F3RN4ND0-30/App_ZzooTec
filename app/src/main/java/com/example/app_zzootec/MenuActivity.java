@@ -57,23 +57,37 @@ public class MenuActivity extends AppCompatActivity {
                 if(item.getItemId()==R.id.Home){
                     textView.setText("ZzooTec");
                     Fragment(new HomeFragment());
-                    Toast.makeText(MenuActivity.this, "Home", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MenuActivity.this, "Clientes", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                 }
                 else if(item.getItemId()==R.id.Bus){
                     textView.setText("ZzooTec");
                     Fragment(new PerfilEditFragment());
-                    Toast.makeText(MenuActivity.this, "Bus", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MenuActivity.this, "Editar Perfil", Toast.LENGTH_SHORT).show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if(item.getItemId()==R.id.Product){
+                    textView.setText("ZzooTec");
+                    Fragment(new ProductFragment());
+                    Toast.makeText(MenuActivity.this, "Productos", Toast.LENGTH_SHORT).show();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if(item.getItemId()==R.id.Report){
+                    textView.setText("ZzooTec");
+                    Fragment(new ReportFragment());
+                    Toast.makeText(MenuActivity.this, "Reportes", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                 }
                 else if(item.getItemId()==R.id.Rating){
                     textView.setText("ZzooTec");
                     Fragment(new AttendanceFragment());
-                    Toast.makeText(MenuActivity.this, "Rating", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MenuActivity.this, "Asistencia", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                 }
-                else if(item.getItemId()==R.id.logout){
-                    Toast.makeText(MenuActivity.this, "logout", Toast.LENGTH_SHORT).show();
+                else if(item.getItemId()==R.id.sucursales){
+                    textView.setText("ZzooTec");
+                    Fragment(new BranchesFragment());
+                    Toast.makeText(MenuActivity.this, "Sucursales", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                 }
 
@@ -86,10 +100,10 @@ public class MenuActivity extends AppCompatActivity {
 
                 if(item.getItemId()==R.id.home1){
                     startActivity(new Intent(getApplicationContext(), MenuActivity.class));
-                    Toast.makeText(MenuActivity.this, "Home1", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MenuActivity.this, "Menu", Toast.LENGTH_SHORT).show();
                 }
                 else if(item.getItemId()==R.id.notification){
-                    Toast.makeText(MenuActivity.this, "notification", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MenuActivity.this, "Notification", Toast.LENGTH_SHORT).show();
 
                 }
                 return false;

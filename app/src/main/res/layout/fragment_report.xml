@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
+    tools:context=".ReportFragment"
     android:background="@drawable/contorno"
     android:orientation="vertical">
 
@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Clientes"
+            android:text="Reportes"
             android:textSize="30dp"
             android:gravity="center"
             android:textColor="@color/white"
@@ -25,20 +25,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="582dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="82dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/buscar" />
+                android:src="@drawable/buscar"
+                android:layout_marginTop="10dp"/>
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="471dp"
-                android:src="@drawable/clientess" />
+                android:layout_height="486dp"
+                android:src="@drawable/reportes" />
+
         </LinearLayout>
 
     </LinearLayout>
