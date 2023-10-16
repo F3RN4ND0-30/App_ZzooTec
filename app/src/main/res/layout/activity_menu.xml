@@ -37,38 +37,11 @@
             android:layout_height="match_parent"
             android:layout_marginTop="?attr/actionBarSize">
 
-            <LinearLayout
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_marginTop="80dp">
+                android:layout_height="match_parent"
+                android:src="@drawable/menu"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BIENVENIDO A ZzooTec"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="30dp"
-                    android:layout_marginBottom="50dp"/>
-
-                <ImageView
-                    android:layout_width="260dp"
-                    android:layout_height="250dp"
-                    app:srcCompat="@drawable/logo_fernando"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="50dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Recuerda que siempre debes atender con el corazon"
-                    android:textSize="30dp"
-                    android:textColor="@color/white"
-                    android:gravity="center"/>
-
-            </LinearLayout>
         </FrameLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

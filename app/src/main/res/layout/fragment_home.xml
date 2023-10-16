@@ -38,7 +38,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="471dp"
-                android:src="@drawable/clientess" />
+                android:src="@drawable/clientes" />
         </LinearLayout>
 
     </LinearLayout>
