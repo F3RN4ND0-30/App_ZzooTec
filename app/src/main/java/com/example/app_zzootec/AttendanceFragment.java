@@ -30,7 +30,7 @@ public class AttendanceFragment extends Fragment {
     }
 
     public void redirigir(){
-        Intent telegram = new Intent(Intent.ACTION_VIEW , Uri.parse("https://telegram.me/InfotechAvl_bot"));
+        Intent telegram = new Intent(Intent.ACTION_VIEW , Uri.parse("https://t.me/+SGxLHRA4P-piZjNh"));
         startActivity(telegram);
     }
 }
