@@ -51,7 +51,7 @@
             android:layout_width="320dp"
             android:layout_height="55dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
             android:textColorHint="@color/white"
@@ -64,7 +64,7 @@
             android:layout_width="320dp"
             android:layout_height="55dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
             android:textColorHint="@color/white"
@@ -76,7 +76,7 @@
             android:layout_width="320dp"
             android:layout_height="55dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
             android:textColorHint="@color/white"
@@ -87,14 +87,15 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="62dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal">
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/guardar_cambios"/>
+
+        <ImageButton
+            android:layout_width="268dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/guardar_cambios" />
     </LinearLayout>
 
 </LinearLayout>

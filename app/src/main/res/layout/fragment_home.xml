@@ -20,27 +20,84 @@
             android:text="Clientes"
             android:textSize="30dp"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="#FF0101"
             android:textStyle="bold"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="582dp"
             android:layout_marginTop="15dp"
+            android:background="@drawable/borde_azul"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="82dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/buscar" />
+            <SearchView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/OvalSearchView"/>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="471dp"
-                android:src="@drawable/clientes" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cliente_icon"/>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:background="@drawable/borde_rojo"
+                android:textColorHint="@color/white"
+                android:layout_gravity="center"
+                android:hint="Nombre"
+                android:inputType="text">
+            </EditText>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:background="@drawable/borde_rojo"
+                android:textColorHint="@color/white"
+                android:layout_gravity="center"
+                android:hint="Apellido"
+                android:inputType="text">
+            </EditText>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:background="@drawable/borde_rojo"
+                android:textColorHint="@color/white"
+                android:hint="Codigo"
+                android:layout_gravity="center"
+                android:inputType="text">
+            </EditText>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:background="@drawable/borde_rojo"
+                android:textColorHint="@color/white"
+                android:hint="Estado"
+                android:inputType="text">
+            </EditText>
+
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

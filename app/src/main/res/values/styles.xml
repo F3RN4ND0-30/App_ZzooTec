@@ -1,0 +1,6 @@
+<resources>
+    <style name="OvalSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@drawable/oval_searchview_background</item>
+        <item name="android:iconifiedByDefault">false</item>
+    </style>
+</resources>
