@@ -20,27 +20,31 @@
             android:text="Sucursales"
             android:textSize="30dp"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="#FFDD00"
             android:textStyle="bold"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="582dp"
             android:layout_marginTop="15dp"
-            android:orientation="vertical">
-
-            <SearchView
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/OvalSearchView"/>
+            android:orientation="vertical"
+            android:background="@drawable/borde_verde">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="350dp"
                 android:layout_height="450dp"
-                android:src="@drawable/sucursales"
-                android:layout_marginTop="15dp"/>
+                android:layout_gravity="center"
+                android:src="@drawable/tienda_1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_1"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textColor="#ffff"
+                android:textStyle="bold"/>
+
         </LinearLayout>
 
     </LinearLayout>
