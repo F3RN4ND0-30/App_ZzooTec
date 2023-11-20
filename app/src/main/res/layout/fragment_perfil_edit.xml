@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/contorno"
     android:orientation="vertical"
-    tools:context=".PerfilEditFragment">
+    tools:context=".ui.fragment.PerfilEditFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout

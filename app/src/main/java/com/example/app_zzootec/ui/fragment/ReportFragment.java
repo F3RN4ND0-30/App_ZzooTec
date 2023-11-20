@@ -1,4 +1,4 @@
-package com.example.app_zzootec;
+package com.example.app_zzootec.ui.fragment;
 
 import android.os.Bundle;
 
@@ -8,14 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class PerfilEditFragment extends Fragment {
+import com.example.app_zzootec.R;
+
+public class ReportFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_perfil_edit, container, false);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_report, container, false);
     }
 }

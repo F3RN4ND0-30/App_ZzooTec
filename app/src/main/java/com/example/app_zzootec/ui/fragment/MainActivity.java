@@ -1,4 +1,4 @@
-package com.example.app_zzootec;
+package com.example.app_zzootec.ui.fragment;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -13,7 +13,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.app_zzootec.login.LoginActivity;
+import com.example.app_zzootec.R;
+import com.example.app_zzootec.ui.auth.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
