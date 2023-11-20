@@ -1,7 +1,9 @@
 package com.example.app_zzootec.model;
 
-import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.Date;
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Productos {
 
     private Long id;
@@ -12,12 +14,11 @@ public class Productos {
     private String supplier;
     private Object category;
     private Object storage;
-    private Date createDate;
 
     public Productos() {
     }
 
-    public Productos(Long id, String name, String image, String price, String stock, String supplier, Object category, Object storage, Date createDate) {
+    public Productos(Long id, String name, String image, String price, String stock, String supplier, Object category, Object storage) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -26,7 +27,6 @@ public class Productos {
         this.supplier = supplier;
         this.category = category;
         this.storage = storage;
-        this.createDate = createDate;
     }
 
     public Long getId() {
@@ -92,12 +92,5 @@ public class Productos {
     public void setStorage(Object storage) {
         this.storage = storage;
     }
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
 }
+

@@ -12,15 +12,15 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface UserAPI {
-    public static final String PREFIX = "api/usuarios";
+    public static final String PREFIX = "api/v1/users";
 
     @GET(PREFIX + "/list")
     Call<List<Usuario>> listar();
 
-    @GET(PREFIX + "/{id}/get")
-    Call<List<Usuario>> obtenerUsuarioPorId(@Path("id") String id);
+    @GET(PREFIX + "/{id}")
+    Call<Usuario> obtenerUsuarioPorId(@Path("id") Long id);
 
     @PUT(PREFIX + "/{id}/update")
-    Call<List<Usuario>> editarUsuario(@Path("id") String id, @Body HashMap<String, Object> user);
+    Call<Usuario> editarUsuario(@Path("id") String id, @Body HashMap<String, Object> user);
 
 }

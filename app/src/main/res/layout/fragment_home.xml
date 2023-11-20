@@ -43,6 +43,7 @@
                 android:src="@drawable/cliente_icon"/>
 
             <EditText
+                android:id="@+id/nombreCli"
                 android:layout_width="320dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="32dp"
@@ -53,10 +54,12 @@
                 android:textColorHint="@color/white"
                 android:layout_gravity="center"
                 android:hint="Nombre"
+                android:textColor="@color/white"
                 android:inputType="text">
             </EditText>
 
             <EditText
+                android:id="@+id/apellidoCli"
                 android:layout_width="320dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="32dp"
@@ -67,10 +70,12 @@
                 android:textColorHint="@color/white"
                 android:layout_gravity="center"
                 android:hint="Apellido"
+                android:textColor="@color/white"
                 android:inputType="text">
             </EditText>
 
             <EditText
+                android:id="@+id/codigoCli"
                 android:layout_width="320dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="32dp"
@@ -79,12 +84,14 @@
                 android:ems="10"
                 android:background="@drawable/borde_rojo"
                 android:textColorHint="@color/white"
+                android:textColor="@color/white"
                 android:hint="Codigo"
                 android:layout_gravity="center"
                 android:inputType="text">
             </EditText>
 
             <EditText
+                android:id="@+id/estadoCli"
                 android:layout_width="320dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="32dp"
@@ -95,6 +102,7 @@
                 android:background="@drawable/borde_rojo"
                 android:textColorHint="@color/white"
                 android:hint="Estado"
+                android:textColor="@color/white"
                 android:inputType="text">
             </EditText>
 

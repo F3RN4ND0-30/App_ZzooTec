@@ -47,6 +47,7 @@
         android:layout_marginTop="5dp">
 
         <EditText
+            android:textColor="@color/white"
             android:id="@+id/Edit_user"
             android:layout_width="320dp"
             android:layout_height="55dp"
@@ -60,6 +61,7 @@
         </EditText>
 
         <EditText
+            android:textColor="@color/white"
             android:id="@+id/Edit_password"
             android:layout_width="320dp"
             android:layout_height="55dp"
@@ -71,7 +73,9 @@
             android:hint="Nueva Contraseña"
             android:inputType="textPassword">
         </EditText>
+
         <EditText
+            android:textColor="@color/white"
             android:id="@+id/Confirm_password"
             android:layout_width="320dp"
             android:layout_height="55dp"

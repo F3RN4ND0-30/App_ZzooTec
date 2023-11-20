@@ -7,7 +7,7 @@ public class Usuario {
     private String email;
     private String firstName;
     private String lastName;
-    private String userName;
+    private String username;
     private String password;
     private String contract;
     private String genre;
@@ -19,12 +19,12 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Long id, String email, String firstName, String lastName, String userName, String password, String contract, String genre, Object roles, Object branch, Date creationDate, Date departureDate) {
+    public Usuario(Long id, String email, String firstName, String lastName, String username, String password, String contract, String genre, Object roles, Object branch, Date creationDate, Date departureDate) {
         this.id = id;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.userName = userName;
+        this.username = username;
         this.password = password;
         this.contract = contract;
         this.genre = genre;
@@ -66,12 +66,12 @@ public class Usuario {
         this.lastName = lastName;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
