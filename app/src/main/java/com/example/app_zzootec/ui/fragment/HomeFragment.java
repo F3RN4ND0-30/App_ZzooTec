@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,9 @@ public class HomeFragment extends Fragment {
     private EditText nombre;
     private EditText apellido;
     private EditText codigo;
+    private EditText generoCli;
+
+    private SearchView buscar_cliente;
 
     private UserAPI userService = Apis.getUserService();
 
@@ -45,8 +49,46 @@ public class HomeFragment extends Fragment {
         nombre = (EditText) view.findViewById(R.id.nombreCli);
         apellido = (EditText) view.findViewById(R.id.apellidoCli);
         codigo = (EditText) view.findViewById(R.id.codigoCli);
+        generoCli = (EditText) view.findViewById(R.id.generoCli);
+        buscar_cliente = (SearchView) view.findViewById(R.id.buscar_cliente);
 
         Cliente();
+
+        Buscar_cliente();
+    }
+
+    public void Buscar_cliente(){
+        buscar_cliente.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                Call<Usuario>usuario = userService.obtenerUsuarioPorId(Long.parseLong(s.toString()));
+                usuario.enqueue(new Callback<Usuario>() {
+                    @Override
+                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                        if(response.isSuccessful()){
+                            Log.d("usuario",response.body().toString());
+                            Usuario usuario = response.body();
+                            nombre.setText(usuario.getFirstName());
+                            apellido.setText(usuario.getLastName());
+                            codigo.setText(usuario.getId().toString());
+                            generoCli.setText(usuario.getGenre());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Usuario> call, Throwable t) {
+                        Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                        Log.d("usuario",t.getMessage());
+                    }
+                });
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
     }
 
     public void Cliente(){
@@ -60,6 +102,7 @@ public class HomeFragment extends Fragment {
                     nombre.setText(usuario.getFirstName());
                     apellido.setText(usuario.getLastName());
                     codigo.setText(usuario.getId().toString());
+                    generoCli.setText(usuario.getGenre());
                 }
             }
 

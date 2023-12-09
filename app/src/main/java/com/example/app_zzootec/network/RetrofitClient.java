@@ -18,7 +18,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String BASE_URL = "http://192.168.18.32:8080/"; // Reemplaza con la URL real
+    private static final String BASE_URL = "http://192.168.1.11:8080/"; // Reemplaza con la URL real
     private static Retrofit retrofit = null;
 
     private static String authToken = "";

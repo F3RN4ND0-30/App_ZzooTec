@@ -1,5 +1,7 @@
 package com.example.app_zzootec.ui.fragment;
 
+import static android.content.ContentValues.TAG;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.app_zzootec.R;
@@ -24,9 +27,12 @@ import retrofit2.Response;
 
 public class PerfilEditFragment extends Fragment {
 
+    EditText usuarios;
     EditText correo;
-    EditText password;
-    EditText confimpass;
+    EditText telefono;
+
+    EditText contratoPer;
+
     private UserAPI userService = Apis.getUserService();
 
     @Override
@@ -41,24 +47,27 @@ public class PerfilEditFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        correo = (EditText) view.findViewById(R.id.Edit_user);
-        password = (EditText) view.findViewById(R.id.Edit_password);
-        confimpass = (EditText) view.findViewById(R.id.Confirm_password);
+        correo = (EditText) view.findViewById(R.id.CorreoPer);
+        usuarios = (EditText) view.findViewById(R.id.UsuarioPer);
+        telefono = (EditText) view.findViewById(R.id.telefonoPer);
+        contratoPer = (EditText) view.findViewById(R.id.contratoPer);
 
-        EditarPerfil();
+        Perfil();
+
     }
 
-    public void EditarPerfil(){
-        Call<Usuario> usuario = userService.obtenerUsuarioPorId(1l);
+    public void Perfil(){
+        Call<Usuario>usuario = userService.obtenerUsuarioActual();
         usuario.enqueue(new Callback<Usuario>() {
             @Override
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 if(response.isSuccessful()){
                     Log.d("usuario",response.body().toString());
                     Usuario usuario = response.body();
-                    correo.setText(usuario.getFirstName());
-                    password.setText(usuario.getLastName());
-                    confimpass.setText(usuario.getId().toString());
+                    correo.setText(usuario.getEmail());
+                    usuarios.setText(usuario.getUsername());
+                    telefono.setText(usuario.getPhone());
+                    contratoPer.setText(usuario.getContract());
                 }
             }
 

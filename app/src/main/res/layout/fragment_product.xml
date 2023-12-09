@@ -3,39 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.ProductFragment"
     android:background="@drawable/contorno"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.fragment.ProductFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Productos"
-            android:textSize="30dp"
             android:gravity="center"
+            android:text="Productos"
             android:textColor="#1AFF00"
-            android:textStyle="bold"/>
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="582dp"
             android:layout_marginTop="15dp"
-            android:orientation="vertical"
-            android:background="@drawable/borde_amarillo">
+            android:background="@drawable/borde_amarillo"
+            android:orientation="vertical">
 
             <SearchView
-                android:layout_marginTop="9dp"
-                android:layout_marginBottom="15dp"
+                android:id="@+id/buscar"
+                style="@style/OvalSearchView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/OvalSearchView"/>
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="15dp" />
 
             <ImageView
                 android:layout_width="188dp"
@@ -43,69 +44,116 @@
                 android:layout_gravity="center"
                 android:src="@drawable/producto_icon" />
 
-            <EditText
-                android:textColor="@color/white"
-                android:id="@+id/nombreProd"
-                android:layout_width="320dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="32dp"
-                android:ems="10"
-                android:layout_gravity="center"
-                android:background="@drawable/borde_verde"
-                android:textColorHint="@color/white"
-                android:hint="Nombre"
-                android:inputType="text">
-            </EditText>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <EditText
-                android:textColor="@color/white"
-                android:id="@+id/codigoProd"
-                android:layout_width="320dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="32dp"
-                android:ems="10"
-                android:layout_gravity="center"
-                android:background="@drawable/borde_verde"
-                android:textColorHint="@color/white"
-                android:hint="Codigo"
-                android:inputType="text">
-            </EditText>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <EditText
-                android:textColor="@color/white"
-                android:id="@+id/stockProd"
-                android:layout_width="320dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="32dp"
-                android:ems="10"
-                android:layout_gravity="center"
-                android:background="@drawable/borde_verde"
-                android:textColorHint="@color/white"
-                android:hint="Stock"
-                android:inputType="text">
-            </EditText>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Nombre: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
 
-            <EditText
-                android:textColor="@color/white"
-                android:id="@+id/categoriaProd"
-                android:layout_width="320dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="32dp"
-                android:ems="10"
-                android:layout_gravity="center"
-                android:background="@drawable/borde_verde"
-                android:textColorHint="@color/white"
-                android:hint="Categoria"
-                android:inputType="text">
-            </EditText>
+                    <EditText
+                        android:id="@+id/nombreProd"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_verde"
+                        android:ems="10"
+                        android:hint="Nombre"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Id: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/codigoProd"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_verde"
+                        android:ems="10"
+                        android:hint="Codigo"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Stock: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/stockProd"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_verde"
+                        android:ems="10"
+                        android:hint="Stock"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Categoria: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/categoriaProd"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_verde"
+                        android:ems="10"
+                        android:hint="Categoria"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+                </LinearLayout>
+            </ScrollView>
         </LinearLayout>
 
     </LinearLayout>

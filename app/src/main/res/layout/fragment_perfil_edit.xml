@@ -11,95 +11,141 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Editar Perfil"
-            android:textSize="30dp"
             android:gravity="center"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginBottom="15dp"/>
+            android:text="Perfil"
+            android:textColor="#003FFF"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Foto de perfil:"
-            android:layout_marginLeft="20dp"
-            android:textColor="@color/white"
-            android:textSize="20dp"/>
-
-        <ImageView
-            android:layout_width="230dp"
-            android:layout_height="230dp"
-            android:layout_gravity="center"
+            android:layout_height="582dp"
             android:layout_marginTop="15dp"
-            android:src="@drawable/perfil"/>
+            android:background="@drawable/borde_verde"
+            android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="215dp"
+                android:layout_height="280dp"
+                android:layout_gravity="center"
+                android:src="@drawable/perfil" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Usuario: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/UsuarioPer"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_azul"
+                        android:ems="10"
+                        android:hint="Usuario"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Correo: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/CorreoPer"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_azul"
+                        android:ems="10"
+                        android:hint="Correo"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Telefono: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/telefonoPer"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_azul"
+                        android:ems="10"
+                        android:hint="Telefono"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Contrato: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/contratoPer"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_azul"
+                        android:ems="10"
+                        android:hint="Contrato"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="5dp">
-
-        <EditText
-            android:textColor="@color/white"
-            android:id="@+id/Edit_user"
-            android:layout_width="320dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="32dp"
-            android:ems="10"
-            android:textColorHint="@color/white"
-            android:hint="Nuevo Correo"
-            android:inputType="textEmailAddress">
-        </EditText>
-
-        <EditText
-            android:textColor="@color/white"
-            android:id="@+id/Edit_password"
-            android:layout_width="320dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="32dp"
-            android:ems="10"
-            android:textColorHint="@color/white"
-            android:hint="Nueva Contraseña"
-            android:inputType="textPassword">
-        </EditText>
-
-        <EditText
-            android:textColor="@color/white"
-            android:id="@+id/Confirm_password"
-            android:layout_width="320dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="32dp"
-            android:ems="10"
-            android:textColorHint="@color/white"
-            android:hint="Confirmar Contraseña"
-            android:inputType="textPassword">
-        </EditText>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:layout_width="268dp"
-            android:layout_height="74dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/guardar_cambios" />
-    </LinearLayout>
-
 </LinearLayout>

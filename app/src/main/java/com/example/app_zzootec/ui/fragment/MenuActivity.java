@@ -73,12 +73,6 @@ public class MenuActivity extends AppCompatActivity {
                     Toast.makeText(MenuActivity.this, "Productos", Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                 }
-                else if(item.getItemId()==R.id.Report){
-                    textView.setText("ZzooTec");
-                    Fragment(new ReportFragment());
-                    Toast.makeText(MenuActivity.this, "Reportes", Toast.LENGTH_SHORT).show();
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                }
                 else if(item.getItemId()==R.id.Rating){
                     textView.setText("ZzooTec");
                     Fragment(new AttendanceFragment());
@@ -102,10 +96,6 @@ public class MenuActivity extends AppCompatActivity {
                 if(item.getItemId()==R.id.home1){
                     startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                     Toast.makeText(MenuActivity.this, "Menu", Toast.LENGTH_SHORT).show();
-                }
-                else if(item.getItemId()==R.id.notification){
-                    Toast.makeText(MenuActivity.this, "Notification", Toast.LENGTH_SHORT).show();
-
                 }
                 return false;
             }

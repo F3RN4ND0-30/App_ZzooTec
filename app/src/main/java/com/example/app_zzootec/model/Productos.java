@@ -11,14 +11,14 @@ public class Productos {
     private String image;
     private String price;
     private String stock;
-    private String supplier;
-    private Object category;
+    private Proveedores supplier;
+    private Categoria category;
     private Object storage;
 
     public Productos() {
     }
 
-    public Productos(Long id, String name, String image, String price, String stock, String supplier, Object category, Object storage) {
+    public Productos(Long id, String name, String image, String price, String stock, Proveedores supplier, Categoria category, Object storage) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -69,19 +69,19 @@ public class Productos {
         this.stock = stock;
     }
 
-    public String getSupplier() {
+    public Proveedores getSupplier() {
         return supplier;
     }
 
-    public void setSupplier(String supplier) {
+    public void setSupplier(Proveedores supplier) {
         this.supplier = supplier;
     }
 
-    public Object getCategory() {
+    public Categoria getCategory() {
         return category;
     }
 
-    public void setCategory(Object category) {
+    public void setCategory(Categoria category) {
         this.category = category;
     }
 

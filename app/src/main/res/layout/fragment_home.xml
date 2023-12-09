@@ -3,25 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.HomeFragment"
     android:background="@drawable/contorno"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Clientes"
-            android:textSize="30dp"
             android:gravity="center"
+            android:text="Usuarios"
             android:textColor="#FF0101"
-            android:textStyle="bold"/>
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,81 +31,128 @@
             android:orientation="vertical">
 
             <SearchView
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="15dp"
+                android:id="@+id/buscar_cliente"
+                style="@style/OvalSearchView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/OvalSearchView"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cliente_icon"/>
+                android:src="@drawable/cliente_icon" />
 
-            <EditText
-                android:id="@+id/nombreCli"
-                android:layout_width="320dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="32dp"
-                android:ems="10"
-                android:background="@drawable/borde_rojo"
-                android:textColorHint="@color/white"
-                android:layout_gravity="center"
-                android:hint="Nombre"
-                android:textColor="@color/white"
-                android:inputType="text">
-            </EditText>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/apellidoCli"
-                android:layout_width="320dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="32dp"
-                android:ems="10"
-                android:background="@drawable/borde_rojo"
-                android:textColorHint="@color/white"
-                android:layout_gravity="center"
-                android:hint="Apellido"
-                android:textColor="@color/white"
-                android:inputType="text">
-            </EditText>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/codigoCli"
-                android:layout_width="320dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="32dp"
-                android:ems="10"
-                android:background="@drawable/borde_rojo"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"
-                android:hint="Codigo"
-                android:layout_gravity="center"
-                android:inputType="text">
-            </EditText>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Nombre: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
 
-            <EditText
-                android:id="@+id/estadoCli"
-                android:layout_width="320dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="32dp"
-                android:ems="10"
-                android:layout_gravity="center"
-                android:background="@drawable/borde_rojo"
-                android:textColorHint="@color/white"
-                android:hint="Estado"
-                android:textColor="@color/white"
-                android:inputType="text">
-            </EditText>
+                    <EditText
+                        android:id="@+id/nombreCli"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_rojo"
+                        android:ems="10"
+                        android:hint="Nombre"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Apellido: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/apellidoCli"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_rojo"
+                        android:ems="10"
+                        android:hint="Apellido"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Id: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/codigoCli"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_rojo"
+                        android:ems="10"
+                        android:hint="Codigo"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Genero: "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/generoCli"
+                        android:layout_width="320dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="32dp"
+                        android:background="@drawable/borde_rojo"
+                        android:ems="10"
+                        android:hint="Genero"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"></EditText>
+                </LinearLayout>
+            </ScrollView>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

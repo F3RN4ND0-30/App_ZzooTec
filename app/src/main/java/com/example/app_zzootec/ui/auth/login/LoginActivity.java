@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -70,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<AuthModel> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, "Error al logearse", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Error al logearse"+t.getMessage(), Toast.LENGTH_SHORT).show();
                 t.printStackTrace();
             }
         });

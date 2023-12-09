@@ -2,23 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group>
         <item android:id="@+id/Home"
-            android:title="Clientes"
-            android:icon="@drawable/icono_cliente"
+            android:title="Usuarios"
+            android:icon="@drawable/baseline_person_search_24"
             android:checkable="true"/>
 
         <item android:id="@+id/Bus"
-            android:title="Editar Perfil"
-            android:icon="@drawable/edit_user"
+            android:title="Perfil"
+            android:icon="@drawable/baseline_person_24"
             android:checkable="true"/>
 
         <item android:id="@+id/Product"
             android:title="Productos"
             android:icon="@drawable/baseline_local_grocery_store_24"
-            android:checkable="true"/>
-
-        <item android:id="@+id/Report"
-            android:title="Reportes"
-            android:icon="@drawable/baseline_backup_table_24"
             android:checkable="true"/>
 
         <item android:id="@+id/Rating"

@@ -20,7 +20,10 @@ public interface UserAPI {
     @GET(PREFIX + "/{id}")
     Call<Usuario> obtenerUsuarioPorId(@Path("id") Long id);
 
-    @PUT(PREFIX + "/{id}/update")
-    Call<Usuario> editarUsuario(@Path("id") String id, @Body HashMap<String, Object> user);
+    @PUT(PREFIX + "/{id}")
+    Call<Usuario> editarUsuario(@Path("id") Long id, @Body Usuario user);
+
+    @GET(PREFIX + "/userInfo")
+    Call<Usuario> obtenerUsuarioActual();
 
 }

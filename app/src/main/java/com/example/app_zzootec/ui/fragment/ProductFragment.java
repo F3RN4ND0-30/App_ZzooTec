@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.app_zzootec.R;
@@ -30,6 +31,7 @@ public class ProductFragment extends Fragment {
     private EditText codigoProd;
     private EditText stockProd;
     private EditText categoriaProd;
+    private SearchView buscar;
     private ProductoAPI productoAPI = Apis.getProductoService();
 
     @Override
@@ -45,9 +47,46 @@ public class ProductFragment extends Fragment {
         nombreProd = (EditText) view.findViewById(R.id.nombreProd);
         codigoProd = (EditText) view.findViewById(R.id.codigoProd);
         stockProd = (EditText) view.findViewById(R.id.stockProd);
+        buscar = (SearchView) view.findViewById(R.id.buscar);
         categoriaProd = (EditText) view.findViewById(R.id.categoriaProd);
 
         Productos();
+
+        Buscar();
+    }
+
+    public void Buscar(){
+        buscar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                Call<Productos> producto = productoAPI.findById(Long.parseLong(s.toString()));
+                producto.enqueue(new Callback<Productos>() {
+                    @Override
+                    public void onResponse(Call<Productos> call, Response<Productos> response) {
+                        if(response.isSuccessful()){
+                            Log.d("usuario",response.body().toString());
+                            Productos productos = response.body();
+                            nombreProd.setText(productos.getName());
+                            codigoProd.setText(productos.getId().toString());
+                            stockProd.setText(productos.getStock());
+                            categoriaProd.setText(productos.getCategory().getName());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Productos> call, Throwable t) {
+                        Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                        Log.d("usuario",t.getMessage());
+                    }
+                });
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
     }
 
     public void Productos(){
@@ -61,7 +100,7 @@ public class ProductFragment extends Fragment {
                     nombreProd.setText(productos.getName());
                     codigoProd.setText(productos.getId().toString());
                     stockProd.setText(productos.getStock());
-                    categoriaProd.setText(productos.getCategory().toString());
+                    categoriaProd.setText(productos.getCategory().getName());
                 }
             }
 

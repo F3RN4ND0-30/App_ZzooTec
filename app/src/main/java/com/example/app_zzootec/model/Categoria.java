@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Categoria {
     private String id;
-    private String nombre;
+    private String name;
     private Date creationDate;
 
-    public Categoria(String id, String nombre, Date creationDate) {
+    public Categoria(String id, String name, Date creationDate) {
         this.id = id;
-        this.nombre = nombre;
+        this.name = name;
         this.creationDate = creationDate;
     }
 
@@ -24,12 +24,12 @@ public class Categoria {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getCreationDate() {
